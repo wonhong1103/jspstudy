@@ -10,7 +10,7 @@ public class DAO {
 	Connection conn;
 	PreparedStatement pstm;
 	ResultSet rs;
-	
+	                                          
 	private static DAO dao = new DAO();
 	public static DAO getInstance() {
 		return dao;
@@ -21,7 +21,7 @@ public class DAO {
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			String user  = "c##nohsam";
+			String user  = "c##won";
 			String password = "1111";
 			conn = DriverManager.getConnection(url, user, password);
 		} catch (Exception e) {
@@ -121,7 +121,6 @@ public class DAO {
 			conn = getConnection();
 			String sql = "delete from guestbook where idx = ?";
 			pstm = conn.prepareStatement(sql);
-			
 			pstm.setString(1, idx);
 			
 			result = pstm.executeUpdate();
@@ -143,7 +142,6 @@ public class DAO {
 			conn = getConnection();
 			String sql = "update guestbook set name=?, subject=?, content=?, email=? where idx=?";
 			pstm = conn.prepareStatement(sql);
-			
 			pstm.setString(1, vo.getName());
 			pstm.setString(2, vo.getSubject());
 			pstm.setString(3, vo.getContent());

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.ict.model.C_DeleteCommand;
+import com.ict.model.C_writeCommand;
 import com.ict.model.Command;
 import com.ict.model.DeleteCommand;
 import com.ict.model.DeleteOKCommand;
@@ -41,6 +43,8 @@ public class MyController extends HttpServlet {
 			case "delete": comm = new DeleteCommand(); break;
 			case "update_ok": comm = new UpdateOKCommand(); break;
 			case "delete_ok": comm = new DeleteOKCommand(); break;
+			case "c_write": comm = new C_writeCommand(); break;
+			case "c_delete": comm = new C_DeleteCommand(); break;
 		}
 		String path = comm.exec(request, response);
 		request.getRequestDispatcher(path).forward(request, response);
