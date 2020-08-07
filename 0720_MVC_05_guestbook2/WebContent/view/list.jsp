@@ -31,7 +31,7 @@
 								<td colspan="4"><h3> 자료가 존재하지 않습니다. </h3></td>
 							</tr>	
 						</c:when>
-						<c:otherwise>
+						<c:otherwise>  
 							<c:forEach var="k" items="${list}"  varStatus="vs">
 								<tr>
 									<td>${vs.count} </td>

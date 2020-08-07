@@ -27,7 +27,16 @@ public class DAO {
 		VO vo = null;
 		vo = getSession().selectOne("onelist", idx);
 		return vo;
-		
+	}
+	public static MVO getLogIn(MVO mvo) {
+		MVO m_vo = new MVO();
+		m_vo = getSession().selectOne("login", mvo);
+		return m_vo;
+	}
+	public static int getProductInsert(VO vo) throws Exception {
+		int result = 0 ;
+		result = getSession().insert("add",vo);
+		return result;
 	}
 }
 

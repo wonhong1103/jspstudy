@@ -24,8 +24,8 @@ public class DAO {
 		try {
 			// 오라클 드라이버 로딩
 			Class.forName("oracle.jdbc.OracleDriver");
-			String url = "jdbc:oracle:thin:@203.236.220.55:1521:xe";
-			String user = "c##nohsam";
+			String url = "jdbc:oracle:thin:@203.236.220.74:1521:xe";
+			String user = "c##won";
 			String password = "1111";
 			conn = DriverManager.getConnection(url, user, password);
 		} catch (Exception e) {
