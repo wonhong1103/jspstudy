@@ -16,4 +16,5 @@ public class OneListCommand implements Command{
 		request.getSession().setAttribute("vo", vo);
 		return "view/onelist.jsp";
 	}
+	
 }
