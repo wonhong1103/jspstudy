@@ -54,7 +54,7 @@ public class ListCommand implements Command{
 		// 주의 사항 : 계산으로 구한 endBlock의 페이지와 
 		//			   실제 데이터를 가지고 구한 totalPage 값이 다를 수 있다.
 		// 즉 endBlock의 값이 totalPage보다 큰 경우가 발생했을때 
-		// 즉 endBlok 값을totalpage로 변경
+		// 즉 endBlock 값을 totalpage로 변경
 		
 		if (page.getEndBlock()> page.getTotalPage()) {
 			page.setEndBlock(page.getTotalPage());

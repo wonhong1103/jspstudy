@@ -36,7 +36,7 @@ public class Cart {
 			// 카트에 있는 현재 갯수를 증가 
 			cvo.setQuant(cvo.getQuant()+1);
 			total = total + cvo.getP_saleprice();
-		}else {kk
+		}else {
 			// 카트에 담기 
 			VO vo = DAO.getOneList(idx);
 			vo.setQuant(1);
